@@ -75,14 +75,3 @@ test("Verify Safety:Heritage", async ({ page }) => {
     page.getByTestId("imageWithText:image").first()
   ).toHaveScreenshot("safetyHeritage.png");
 });
-
-/*
-
-// API test
-  const _response = await request.get(baseURL);
-  expect(_response.ok()).toBeTruthy();
-  expect(_response.status()).toBe(200);
-  console.log(await _response.json());
-  let _repost = await _response.json();
-  
-  expect(_repost.age).toBe(48);*/
