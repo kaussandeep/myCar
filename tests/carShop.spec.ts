@@ -13,6 +13,5 @@ test("Car Configurator flow: ", async ({ page }) => {
   const configuratorLandingPageHeading = await page
     .getByRole("heading", { name: "Design your Volvo" })
     .textContent();
-  console.log(configuratorLandingPageHeading);
   expect(configuratorLandingPageHeading).toBe("Design your Volvo");
 });

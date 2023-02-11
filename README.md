@@ -1,5 +1,5 @@
-# testAPI
-# Welcome to UI test. 
+# Volvo Cars
+# Welcome to UI tests. 
 ## Introduction. 
 The tests use the following APIs. 
  Playwright. 
@@ -13,7 +13,7 @@ The tests use the following APIs.
 ## To run tests on local browsers. 
  npm run test:all. 
  This will result in new baseline images generated. So the tests will fail for the first time.  
-## How to create new Visualization tests. (How to generate and upload standard dockerized baselines)
+## How to create new Visual regression tests. (How to generate and upload standard dockerized baselines)
  run `sh update-screenshots.sh`. 
  This will run the tests in docker container and create new baseline images. These baseline images since generated in a dockerized container, will be standard for every user.
 ## Continuous Integration. 
