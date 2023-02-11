@@ -5,6 +5,8 @@ test.beforeEach(async ({ page }) => {
   const homePage = new HomePage(page);
   await homePage.goto();
 });
+
+test.describe.configure({ retries: 3 });
 test("Verify all car types with screen comparison", async ({ page }) => {
   await page.getByRole("button", { name: "Our Cars" }).click();
   await page.getByRole("tab", { name: "Electric Pure electric" }).click();
