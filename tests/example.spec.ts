@@ -37,9 +37,9 @@ test("Verify Safety: Culture & Vision", async ({ page }) => {
   await page.getByRole("link", { name: "Learn more about car safety" }).click();
   await page.getByRole("link", { name: "Culture & vision" }).click();
   await page.waitForLoadState("networkidle");
-  await expect(page.getByTestId("hero:image").first()).toHaveScreenshot(
-    "safetyCulture.png"
-  );
+  await expect(
+    page.getByTestId("imageWithText:image").first()
+  ).toHaveScreenshot("safetyCulture.png");
 });
 
 test("Verify Safety:Features", async ({ page }) => {
@@ -55,18 +55,18 @@ test("Verify Safety:Child Safety", async ({ page }) => {
   await page.getByRole("link", { name: "Learn more about car safety" }).click();
   await page.getByRole("link", { name: "Child safety" }).click();
   await page.waitForLoadState("networkidle");
-  await expect(page.getByTestId("hero:image").first()).toHaveScreenshot(
-    "safetyChildSafety.png"
-  );
+  await expect(
+    page.getByTestId("imageWithText:image").first()
+  ).toHaveScreenshot("safetyChildSafety.png");
 });
 
 test("Verify Safety:Research", async ({ page }) => {
   await page.getByRole("link", { name: "Learn more about car safety" }).click();
   await page.getByRole("link", { name: "Research" }).click();
   await page.waitForLoadState("networkidle");
-  await expect(page.getByTestId("hero:image").first()).toHaveScreenshot(
-    "safetyResearch.png"
-  );
+  await expect(
+    page.getByTestId("imageWithText:image").first()
+  ).toHaveScreenshot("safetyResearch.png");
 });
 
 test("Verify Safety:Heritage", async ({ page }) => {
