@@ -4,7 +4,7 @@
 The tests use the following APIs. 
  Playwright. 
  TypeScript. 
- Docker. 
+ Docker. Please keep CPUs: 4 , Memory : 8.00 GB, SWAP: 1 GB atleast
 ## Example API Test. 
 I have also added an API test, just because I am a firm believer of API tests within UI test framework. The API used is an open source API that returns age of a person based on his name. 
 ## How to run tests. 
