@@ -5,6 +5,7 @@ The tests use the following APIs.
  Playwright. 
  TypeScript. 
  Docker. 
+## I have also added an API test, just because I am a firm believer of API tests within UI test framework. The API used is an open source API that returns age of a person based on his name. 
 ## How to run tests. 
  Install Docker for Desktop. 
  Post installation: To run tests using docker containers. 
