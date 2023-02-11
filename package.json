@@ -1,0 +1,33 @@
+{
+  "name": "myCar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test:all": "npx playwright test",
+    "update:snapshots": "sh update-screenshots.sh",
+    "test:local": "docker build -t mycar . && docker run -it mycar:latest npm run test:all",
+    "test:report": "npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaussandeep/myCar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaussandeep/myCar/issues"
+  },
+  "homepage": "https://github.com/kaussandeep/myCar#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.30.0",
+    "@types/jest": "^29.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.34.0"
+  }
+}
