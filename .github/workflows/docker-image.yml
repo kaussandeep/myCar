@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  buildTest:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) 
+    - name: Install Dependencies 
+      run: npm install -D @playwright/test && npx playwright install && npx playwright install-deps
+    - name: Run your tests
+      run: npm run test:all
