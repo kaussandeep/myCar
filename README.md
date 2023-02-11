@@ -10,13 +10,13 @@ I have also added an API test, just because I am a firm believer of API tests wi
 ## How to run tests. 
  Install Docker for Desktop. 
  Post installation: To run tests using docker containers. 
-### npm run test:local.
+### npm run test:local
  Tests are set to run parallely with atleast 4 workers. 
 ## To run tests on local browsers. 
-### npm run test:all. 
+### npm run test:all 
  This will result in new baseline images generated. So the tests will fail for the first time.  
 ## How to create new Visual regression tests. (How to generate and upload standard dockerized baselines)
-### run `sh update-screenshots.sh`. 
+###  `sh update-screenshots.sh` 
  This will run the tests in docker container and create new baseline images. These baseline images since generated in a dockerized container, will be standard for every user.
 ## Continuous Integration. 
  github actions has been setup to run a BuildTest job on every commit. It has been set to run parallel tests with 2 workers. 
