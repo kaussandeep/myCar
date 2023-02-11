@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
   await homePage.goto();
 });
 
-//test.describe.configure({ retries: 3 });
+test.describe.configure({ retries: 3 });
 test("Car Configurator flow: ", async ({ page }) => {
   await page.getByRole("button", { name: "Menu" }).click();
   await page.getByRole("button", { name: "Buy" }).isVisible();
