@@ -1,13 +1,16 @@
-import { test, expect, page } from '@playwright/test';
+import { test, expect, page } from "@playwright/test";
 
-export class HomePage{
-constructor(page){
+export class HomePage {
+  constructor(page) {
     this.page = page;
-}
-
-async goto() {
-    await this.page.goto('https://www.volvocars.com/intl/v/car-safety/a-million-more', { waitUntil: 'networkidle'});
-    await this.page.click('button:text("ACCEPT")')
+    // add comment
   }
 
+  async goto() {
+    await this.page.goto(
+      "https://www.volvocars.com/intl/v/car-safety/a-million-more",
+      { waitUntil: "networkidle" }
+    );
+    await this.page.click('button:text("ACCEPT")');
+  }
 }
