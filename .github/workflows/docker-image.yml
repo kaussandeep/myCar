@@ -17,9 +17,11 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) 
     - name: Install modules
-      run: npm install
+      run: yarn
+    - name: Install ESLint
+      run: npm install eslint --save-dev
     - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
+      run: npx eslint . --ext .js,.jsx,.ts,.tsx
     - name: Install Dependencies 
       run: npm install -D @playwright/test && npx playwright install && npx playwright install-deps
     - name: Run your tests
