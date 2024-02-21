@@ -21,7 +21,7 @@ jobs:
     - name: Install ESLint
       run: npm install eslint --save-dev
     - name: Run ESLint
-      run: npx eslint . --ext .js,.jsx,.ts,.tsx
+      run: npx eslint . --ext .js,.jsx,.ts,.tsx --config .github/workflows/eslintrc.js
     - name: Install Dependencies 
       run: npm install -D @playwright/test && npx playwright install && npx playwright install-deps
     - name: Run your tests
