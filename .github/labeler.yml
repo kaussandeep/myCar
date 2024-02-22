@@ -1,0 +1,13 @@
+tests:
+  - 'tests/page/*'
+
+config:
+  - '.github/*'
+  - '.gitignore'
+  - '.prettierrc'
+  - '.eslintrc.js'
+  - 'package.json'
+  - 'package-lock.json'
+  - 'README.md'
+  - 'LICENSE'
+  
