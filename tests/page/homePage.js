@@ -3,7 +3,7 @@ import { test, expect, page } from "@playwright/test";
 export class HomePage {
   constructor(page) {
     this.page = page;
-    // add comment
+    // add comments
   }
 
   async goto() {
