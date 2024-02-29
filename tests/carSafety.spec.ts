@@ -26,6 +26,7 @@ test("Verify safety information: Highlights", async ({ page }) => {
     .getByTestId("ModelIntro")
     .first()
     .textContent();
+  // expect
   expect(safetyPageHeader).toEqual("Safety");
   await page.waitForLoadState("networkidle");
   await expect(page.getByTestId("hero:image").first()).toHaveScreenshot(
